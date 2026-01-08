@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		#loginForm{margin-left:500px;margin-top: 200px;background-color: yellowgreen;width: 500px;border-radius: 20px;}
+
+	</style>
+</head>
+<body>
+	<form name="loginForm" id="loginForm" method="post">
+		<h2 align="center">Login Form</h2>
+		<table border="0" cellpadding="25px">
+			<tr>
+				<td>Email:</td>
+				<td><input type="email" name="e" id="e" placeholder="Enter Email" title="character,number@gmail.com"></td>
+			</tr>
+			<tr>
+				<td>Password:</td>
+				<td><input type="Password" name="p" id="p" title="at least six character" placeholder="Enter Password"></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="Cancel"></td>
+				<td><input type="submit" value="Login" onclick="login()"></td>
+			</tr>
+		</table>
+	</form>
+	<script type="text/javascript">
+		
+		function login(){
+
+			var email=document.getElementById('e').value;
+		var password=document.getElementById("p").value;
+		var emailfromRegister=sessionStorage.getItem("EMAIL");
+		var passwordfromRegister=sessionStorage.getItem("PASSWORD");
+
+			var e1=/(kyaw)\@(gmail)\.(com)/;
+			var pass1=/(122004)/;
+			
+		if (email==emailfromRegister && password==passwordfromRegister)
+		 {
+		 	var mainLogin=document.getElementById("loginForm");
+		 	window.open("home.html","newWindow");
+		 }
+		 else if(e1.test(email) && pass1.test(password)){
+				
+				window.open("Admin.html","newWindow");
+			}
+
+		 else
+		 {
+		 	alert("Login Fail...");
+		 }
+		 	}
+	</script>
+</body>
+</html>

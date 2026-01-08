@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<style type="text/css">
+
+		#top{position: fixed;
+				width: 100%;
+				top: 0;
+				right: 0;
+				z-index: 900;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 20px 100px;
+				transition: 0.5s;
+				background-color: orange;
+				height: 80px;
+				}
+				}
+
+		#icons1{padding-right: 20px;}
+
+		#icons2{padding-right: 20px;}
+
+		#icons{display: flex;justify-content: space-between;}
+
+		
+
+		#searchbox{border-radius: 10px;background-color: skyblue;border: none;}	
+
+		#h1{width: 80px;height: 80px;margin-left: 5px;}
+		#h1{margin-top: 5px;border-radius: 80px;}
+		ul{list-style: none;text-align: center;}
+		ul li{display: inline-block;position: relative;}
+		ul li a{display: block;padding: 10px 15px;text-decoration: none;}
+
+		ul li ul.dropdown li{display: block;}
+		ul li ul.dropdown{width: auto;position: absolute;display: none;}
+		
+		ul li:hover ul.dropdown{display: block;width: auto;}
+		#list2,#list3,#list4,#list5{margin-left: 50px;font-family: Cursive;font-size: 20px;}
+		#list1{font-family: Cursive;font-size: 20px;}
+		#b{border-radius: 20px;background-color: skyblue;}
+
+		.dark-mode{background-color: skyblue;}
+		button{cursor: pointer;}
+		#changeBodyBackgroundColor{border: none;background-color: orange;}
+
+		#b1{background-color: orange;border: none;margin-right: 20px;}
+
+		#searchbox{border-radius: 10px;}
+
+		#icons1:hover input{width: 200px;background-color: skyblue;}
+
+		#icons1 input{width: 0;outline: none;border: none;font-weight: 500px;transition: 0.8s;background: transparent;}
+
+		#allReview{display: flex;justify-content: space-around;margin-top: 200px;}
+		#allReview1,#allReview2,#allReview3,#allReview4{border: 1px solid black;width: 300px;text-align: center;}
+		#allReview4{margin-top: 100px; margin-left: 100px;}
+		#kyawLwinOo{color: green;}
+		#ooeee{color: green;}
+		#picture1{mix-blend-mode: multiply;}
+		#picture2{mix-blend-mode: multiply;}
+		#picture3{mix-blend-mode: multiply;}
+		#picture4{mix-blend-mode: multiply;}
+	</style>
+</head>
+<body id="google">
+	<div >
+		<div id="top">
+			<div><img src="project5.jpg" width="90px" height="90px" id="h1"></div>
+			<ul>
+				<li id="list1"><a href="home.html">Home</a></li>
+				<li id="list2"><a href="Login.html">Logout</a></li>
+				<li id="list3"><a href="">Author</a>
+					<ul class="dropdown">
+						<div id="b">
+						<li><a href="AKyiTaw.html">AKyiTaw</a></li>
+						<li><a href="LoonHtarHtar.html">LoonHtarHtar</a></li>
+						<li><a href="MoeMoe.html">MoeMoe(Inya)</a></li>
+						<li><a href="ThoeSaung.html">ThoeSaung</a></li>
+						<li><a href="MonHalsey.html">MonHalsey</a></li>
+					</div>
+					</ul>
+				</li>
+				<li id="list4"><a href="review.html">Review</a></li>
+				<li id="list5"><a href="contact.html">About us</a></li>
+			</ul>
+		<div id="icons">
+		<div id="icons1">
+			<input type="search" name="s1" placeholder="search" id="searchbox">
+		<button id="b1" onclick="search()"><a href="#"><i class="glyphicon glyphicon-search"></i></a></button>
+		</div>
+
+		<div id="icons3">
+		<button onclick="dell()" id="changeBodyBackgroundColor"><i class="glyphicon glyphicon-adjust"></i></button>
+		</div>
+	</div>
+
+</div>
+<div id="allReview">
+	<div id="allReview1">
+		<img src="user1.jpg" width="100px" height="100px" id="picture1"><br>
+		<label>Name:<span id="kyawLwinOo">Kyaw Lwin Oo</span></label><br>
+		<label>Book's Name:<span id="kyawLwinOo">Sticker's Village</span></label>
+		<p>This is so funny</p>
+	</div>
+
+	<div id="allReview2">
+		<img src="user2.jpg" width="100px" height="100px" id="picture2"><br>
+		<label>Name:<span id="kyawLwinOo">Khin Swe Zin Han</span></label><br>
+		<label>Book's Name:<span id="kyawLwinOo">Android's Audio</span></label>
+		<p> This book give pleasure.</p>
+	</div>
+
+	<div id="allReview3">
+		<img src="user3.jpg" width="100px" height="100px" id="picture3"><br>
+		<label>Name:<span id="kyawLwinOo">Myint Aung</span></label><br>
+		<label>Book's Name:<span id="kyawLwinOo">Lanzorade</span></label>
+		<p>This is good book.</p>
+	</div>
+
+</div>
+
+<div id="allReview4">
+		<img src="user5.jpg" width="100px" height="100px" id="picture4"><br>
+		<label>Name:<span id="ooeee"></span></label><br>
+		<label>Book's Name:<span id="ooee"></span></label>
+		<p><div id="ooe"></div></p>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+	function dell()
+		{
+				var darkColor=document.getElementById("google");
+				darkColor.classList.toggle("dark-mode");
+		}
+	var first=sessionStorage.getItem("first");
+	document.getElementById("ooeee").innerHTML=first;
+	
+	var second=sessionStorage.getItem("second");
+	document.getElementById("ooee").innerHTML=second;
+
+	var third=sessionStorage.getItem("third");
+	document.getElementById("ooe").innerHTML=third;
+</script>
+</body>
+</html>
