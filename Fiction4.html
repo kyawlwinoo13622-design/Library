@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<style type="text/css">
+
+		#t1{
+			float: left;
+			justify-content: space-between;
+			margin-left: 50px;
+			text-align: center;
+			border-right: 1px solid black;
+		}
+		#t2{
+			float: right;
+			margin-right: 50px;
+			text-align: center;
+		}
+		th{text-align: center;}
+		
+		img{
+			width: 300px;
+			height: 300px;
+			margin-top: 100px;
+			margin-left: 320px;
+		}
+		#d1{
+			margin-left: 330px;
+			margin-top: 20px;
+			border: 1px solid skyblue;
+			border-radius: 10px;
+			width: 90px;
+			height: 25px;
+			text-align: center;
+			background-color: white;
+			color: black;
+		}
+		#d1:hover{background-color: black;color: white;}
+		#d2{
+			background-color: white;
+			color: black;
+			margin-left: 55px;
+			margin-top: 20px;
+			border: 1px solid skyblue;
+			border-radius: 10px;
+			width: 90px;
+			height: 25px;
+			text-align: center;
+		}
+		#d2:hover{background-color: black;color: white;}
+		
+		#d{display: flex;
+			
+		}
+				#b1{
+			background-color: orange;
+			border: none;}
+
+		#searchbox{
+			border-radius: 10px;
+			background-color: skyblue;
+			border: none;
+		}
+		#right{
+			
+			float: right;
+			margin-top: 90px;
+			margin-right: 550px;
+			width: 300px;
+			height: 300px;
+		}
+		
+		#top{
+			position: fixed;
+			width: 100%;
+			top: 0;
+			right: 0;
+			z-index: 900;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 20px 100px;
+			transition: 0.5s;
+			background-color: orange;
+			height: 80px;
+		}
+		
+		
+		
+		
+		#icons1{padding-right: 20px;
+		        }
+		 #icons2{
+		 	    padding-right: 20px;
+		 }
+		 #icons{
+		 	display: flex;
+		 	justify-content: space-between;
+		 }
+		 #icons1:hover input{width: 200px;background-color: skyblue;}
+
+		#icons1 input{width: 0;outline: none;border: none;font-weight: 500px;transition: 0.8s;background: transparent;}
+		#b1{background-color: orange;border: none;}
+
+		textarea{
+			margin-top: 20px;
+			margin-left: 300px;
+			
+			background-color: gray;
+			border-color: red;
+			box-shadow:  5px 5px 5px chocolate;
+		}
+		#allList{
+			margin-top: 100px;
+			width: auto;
+			height:1100px;
+			background-color: palegreen;
+
+		}
+
+		#app{ margin-top: 30px; margin-left: 350px; border: none; border-bottom: 1px solid black;}
+		#bname{ margin-top: 30px; margin-left: 350px; border: none; border-bottom: 1px solid black;}
+
+		.dark-mode{background-color: skyblue;}
+		button{cursor: pointer;}
+		#changeBodyBackgroundColor{border: none;background-color: orange;}
+
+		#formTable{margin-top: 20px;}
+		#h1{width: 80px;height: 80px;margin-left: 5px;}
+		#h1{margin-top: 5px;border-radius: 80px;}
+		ul{list-style: none;text-align: center;}
+		ul li{display: inline-block;position: relative;}
+		ul li a{display: block;padding: 10px 15px;text-decoration: none;}
+
+		ul li ul.dropdown li{display: block;}
+		ul li ul.dropdown{width: auto;position: absolute;display: none;}
+		
+		ul li:hover ul.dropdown{display: block;width: auto;}
+		#list2,#list3,#list4,#list5{margin-left: 50px;font-family: Cursive;font-size: 20px;}
+		#list1{font-family: Cursive;font-size: 20px;}
+		#b{border-radius: 20px;background-color: skyblue;}
+		#comfirmMessage{margin-left: 320px;margin-top: 10px;}
+		#sendbutton{margin-left: 500px;margin-top: 30px;}
+		#Fiction4{background-color: pink;}
+		#relatedBook{float: right;}
+		#se{margin-top: 20px;}
+		#nameData{margin-bottom: 20px; border: none; background-color: skyblue;border-radius: 20px;}
+		#phoneNoData{margin-bottom: 20px; border: none; background-color: skyblue;border-radius: 20px;}
+		#can{margin-top:20px;}
+		#addressData{border: none; background-color: skyblue;border-radius: 20px;}
+		#relatedBook{background-color:white;color: black;border: none;transition-duration:1000ms;transition-property:transform }
+		#relatedBook:hover{transform: rotate(360deg);}
+		#downloadpdffile{color: black;background-color: orange;border: none;margin-left: 10px;}
+		.ruleAndForm{border:1px solid black;border-radius: 10px;padding: 10px;width: 400px;}
+	</style>
+	
+</head>
+<body id="sir">
+<div id="google">
+<div id="top">
+			
+			<div><a href="home.html"><img src="project5.jpg" id="h1"></a></div>
+			<ul>
+				<li id="list1"><a href="home.html">Home</a></li>
+				<li id="list2"><a href="Login.html">Logout</a></li>
+				<li id="list3"><a href="">Author</a>
+					<ul class="dropdown">
+						<div id="b">
+						<li><a href="AKyiTaw.html">AKyiTaw</a></li>
+						<li><a href="LoonHtarHtar.html">LoonHtarHtar</a></li>
+						<li><a href="MoeMoe.html">MoeMoe(Inya)</a></li>
+						<li><a href="ThoeSaung.html">ThoeSaung</a></li>
+						<li><a href="MonHalsey.html">MonHalsey</a></li>
+					</div>
+					</ul>
+				</li>
+				<li id="list4"><a href="review.html">Review</a></li>
+				<li id="list5"><a href="contact.html">About us</a></li>
+			</ul>
+		<div id="icons">
+		<div id="icons1">
+			<input type="search" name="s1" placeholder="search" id="searchbox">
+		<button id="b1" onclick="search()"><a href="#"><i class="glyphicon glyphicon-search"></i></a></button>
+		</div>
+		<div id="icons3">
+		<button onclick="dell()" id="changeBodyBackgroundColor"><i class="glyphicon glyphicon-adjust"></i></button></div>
+		<div id="icons2">
+		<a href=""><button id="downloadpdffile"><i class="glyphicon glyphicon-download-alt"></i></button></a>
+		</div>
+	</div>
+
+</div>
+
+
+
+
+
+<div id="right">
+	
+	<h1>Summary</h1>
+	<p>လြန္ေလျပီးေသာက အနီေရာင္သည္ မ်က္လံုးထဲမွာ ထင္ထင္ရွားရွားကို ျမင္ေနရေလသည္... သူမသည္ အနီေရာင္ကိုသိပ္ၾကိဳက္သည္..သို ့ေသာ္ သူမဘယ္သူလဲ ကၽြန္ေတာ္မသိပါ။</p>
+
+	<div id="ruleAndForm"></div>
+	<div id="checkb"></div>
+	<div id="relatedBook"><button onclick="relatedBook()">RelatedBook &nbsp;<i class="glyphicon glyphicon-book"></i></button></div>
+	</div>
+	
+
+<img name="slide">
+<div id="d">
+<div><button id="d1">Borrow</button></div>
+<div><button id="d2">Review</button></div>
+</div>
+<div id="comfirmMessage"></div>
+<div id="reviewName"></div>
+<div id="reviewBookName"></div>
+<div id="reviewArea"></div>
+<div id="reviewsend"></div>
+<div id="reviewFuck"></div>
+</div>
+<hr>
+<div id="allList">
+	<form name="f1" id="f1">
+	<table border="0" id="t1" name="t1" width="700px" height="1000px" cellspacing="30px">
+		<tr>
+			<th>No.</th>
+			<th>Book Name</th>
+			<th>Author Name</th>
+			<th>Quantity</th>
+			<th>Type</th>
+		</tr>
+		<tr>
+			<td>1.</td>
+			<td><a href="Health1.html">How do we prepare that the habit we ever forget?</a></td>
+			<td>Many Writers</td>
+			<td>9</td>
+			<td>Health</td>
+		</tr>
+     	<tr>
+			<td>2.</td>
+			<td><a href="Health2.html">The tips to be better for your stomach</a></td>
+			<td>Many Writers</td>
+			<td>5</td>
+			<td>Health</td>
+		</tr>
+		<tr>
+			<td>3.</td>
+			<td><a href="Health3.html">Good Habits for health</a></td>
+			<td>Anonymous</td>
+			<td>4</td>
+			<td>Health</td>
+		</tr>
+		<tr>
+		<td>4.</td>
+			<td><a href="Health4.html">Protect to the sunlight</a></td>
+			<td>Many Writers</td>
+			<td>9</td>
+			<td>Health</td>
+		</tr>
+		<tr>
+			<td>5.</td>
+			<td><a href="Health5.html">The symptoms don't equal cause of hormone</a></td>
+			<td>Anonymous</td>
+			<td>7</td>
+			<td>Health</td>
+		</tr>
+		<tr>
+			<td>6.</td>
+			<td><a href="Computter1.html">C++ Programming</a></td>
+			<td>Many Writers</td>
+			<td id="current">1</td>
+			<td>Computer</td>
+		</tr>
+     	<tr>
+			<td>7.</td>
+			<td><a href="Computer2.html">PHP 7</a></td>
+			<td>Many Writers</td>
+			<td>6</td>
+			<td>Computer</td>
+		</tr>
+		<tr>
+			<td>8.</td>
+			<td><a href="Computer3.html">Android Studio</a></td>
+			<td>Anonymous</td>
+			<td>4</td>
+			<td>Computer</td>
+		</tr>
+		<tr>
+			<td>9.</td>
+			<td><a href="Computer4.html">Sketch Up</a></td>
+			<td>U Myat Thu</td>
+			<td>7</td>
+			<td>Computer</td>
+		</tr>
+		<tr>
+			<td>10.</td>
+			<td><a href="Computer5.html">Autocad</a></td>
+			<td>Many Writers</td>
+			<td>6</td>
+			<td>Computer</td>
+		</tr>
+		<tr>
+			<td>11.</td>
+			<td><a href="Horror1.html">Ghost House</a></td>
+			<td>Sacrificer</td>
+			<td>7</td>
+			<td>Horror</td>
+		</tr>
+     	<tr>
+			<td>12.</td>
+			<td><a href="Horror2.html">Born Again</a></td>
+			<td>Tuu Hnaine Mae</td>
+			<td>5</td>
+			<td>Horror</td>
+		</tr>
+		<tr>
+			<td>13.</td>
+			<td><a href="Horror3.html">Black Doza on the bone hill</a></td>
+			<td>Zaya Kyaw Htin</td>
+			<td>8</td>
+			<td>Horror</td>
+		</tr>
+		<tr>
+			<td>14.</td>
+			<td><a href="Horror4.html">Dead Flowers</a></td>
+			<td>Thoe Saung</td>
+			<td>10</td>
+			<td>Horror</td>
+		</tr>
+		<tr>
+			<td>15.</td>
+			<td><a href="Horror5.html">Respondent Soul</a></td>
+			<td>Linn Myat Tayza</td>
+			<td>7</td>
+			<td>Horror</td>
+		</tr>
+		<tr>
+			<td>16.</td>
+			<td><a href="Magazine1.html">New Generation</a></td>
+			<td>Anonymous</td>
+			<td>7</td>
+			<td>Magazine</td>
+		</tr>
+     	<tr>
+			<td>17.</td>
+			<td><a href="Magazine2.html">External Light</a></td>
+			<td>Anonymous</td>
+			<td>9</td>
+			<td>Magazine</td>
+		</tr>
+		<tr>
+			<td>18.</td>
+			<td><a href="Magazine3.html">Lady's Home</a></td>
+			<td>Anonymous</td>
+			<td>4</td>
+			<td>Magazine</td>
+		</tr>
+		<tr>
+			<td>19.</td>
+			<td><a href="Magazine4.html">Adele's World</a></td>
+			<td>Many Writers</td>
+			<td>3</td>
+			<td>Magazine</td>
+		</tr>
+		<tr>
+			<td>20.</td>
+			<td><a href="Magazine5.html">BTS SUGA Fashion show</a></td>
+			<td>Many Writers</td>
+			<td>7</td>
+			<td>Magazine</td>
+		</tr>
+		<tr>
+		<td>21.</td>
+			<td><a href="Fiction1.html">Short Fiction No.3</a></td>
+			<td>Moe Moe(inlya)</td>
+			<td>7</td>
+			<td>Fiction</td>
+		</tr>
+     	<tr>
+			<td>22.</td>
+			<td><a href="Fiction2.html">Oh!My Dear</a></td>
+			<td>Thoe Saung</td>
+			<td>4</td>
+			<td>Fiction</td>
+		</tr>
+		<tr>
+			<td>23.</td>
+			<td><a href="Fiction3.html">Healthy Divorce</a></td>
+			<td>Mon Halsey</td>
+			<td>6</td>
+			<td>Fiction</td>
+		</tr>
+		<tr id="Fiction4">
+			<td>24.</td>
+			<td><a href="Fiction4.html">Rain Here</a></td>
+			<td>Thoe Saung</td>
+			<td id="current">5</td>
+			<td>Fiction</td>
+		</tr>
+		<tr>
+			<td>25.</td>
+			<td><a href="Fiction5.html">Widow Village</a></td>
+			<td>Thoe Saung</td>
+			<td>6</td>
+			<td>Fiction</td>
+		</tr>
+		
+	</table>
+		<table border="0" id="t2" width="700px" height="1000px" cellspacing="30px">
+			<tr>
+			<th>No.</th>
+			<th>Book Name</th>
+			<th>Author Name</th>
+			<th>Quantity</th>
+			<th>Type</th>
+		</tr>
+			<tr>
+			<td>26.</td>
+			<td><a href="History1.html">Youth and Politics</a></td>
+			<td>Htet Myat</td>
+			<td>7</td>
+			<td>History</td>
+		</tr>
+     	<tr>
+			<td>27.</td>
+			<td><a href="History2.html">Democracy</a></td>
+			<td>Shwe Ku May Hnin</td>
+			<td>4</td>
+			<td>History</td>
+		</tr>
+		<tr>
+			<td>28.</td>
+			<td><a href="History3.html">Reader's guide to the Marxist Classice</a></td>
+			<td>Kyaw Aung</td>
+			<td>7</td>
+			<td>History</td>
+		</tr>
+		<tr>
+			<td>29.</td>
+			<td><a href="History4.html">Morr Si Tone</a></td>
+			<td>Tin Htun Naing</td>
+			<td>8</td>
+			<td>History</td>
+		</tr>
+		<tr>
+			<td>30.</td>
+			<td><a href="History5.html">Gandhi</a></td>
+			<td>Aung Aye</td>
+			<td>7</td>
+			<td>History</td>
+		</tr>
+		
+		<tr>
+			<td>31.</td>
+			<td><a href="review.html">All kinds of</a></td>
+			<td>A Kyi Taw</td>
+			<td>5</td>
+			<td>Funny</td>
+		</tr>
+		<tr>
+			<td>32.</td>
+			<td><a href="Funny2.html">Branch Where Spirit Stay</a></td>
+			<td>A Kyi Taw</td>
+			<td>6</td>
+			<td>Funny</td>
+		</tr>
+		<tr>
+			<td>33.</td>
+			<td><a href="Funny3.html">Slicker's Village</a></td>
+			<td>A Kyi Taw</td>
+			<td>4</td>
+			<td>Funny</td>
+		</tr>
+		<tr>
+			<td>34.</td>
+			<td><a href="Funny4.html">Village Guy</a></td>
+			<td>A Kyi Taw</td>
+			<td>8</td>
+			<td>Funny</td>
+		</tr>
+		<tr>
+			<td>35.</td>
+			<td><a href="Funnt5.html">Old Children</a></td>
+			<td>A Kyi Taw</td>
+			<td>8</td>
+			<td>Funny</td>
+		</tr>
+		<tr>
+			<td>36.</td>
+			<td><a href="Love Story1.html">My Heart</a></td>
+			<td>Shin Ma</td>
+			<td>7</td>
+			<td>Love Story</td>
+		</tr>
+		<tr>
+			<td>37.</td>
+			<td><a href="Love Story2.html">Warm Because of his sunshine</a></td>
+			<td>Shin Ma</td>
+			<td>6</td>
+			<td>Love Story</td>
+		</tr>
+		<tr>
+			<td>38.</td>
+			<td><a href="Love Story3.html">Short Bond</a></td>
+			<td>Swal Mat Shin</td>
+			<td>9</td>
+			<td>Love Story</td>
+		</tr>
+		<tr>
+			<td>39.</td>
+			<td><a href="Love Story4.html">Sea and Sky Blue</a></td>
+			<td>Loon Htar Htar</td>
+			<td>6</td>
+			<td>Love Story</td>
+		</tr>
+		<tr>
+			<td>40.</td>
+			<td><a href="Love Story5.html">The Old Bound</a></td>
+			<td>Nay Nwe Zin Myint</td>
+			<td>3</td>
+			<td>Love Story</td>
+		</tr>
+		<tr>
+			<td>41.</td>
+			<td><a href="Story1.html">Kind and Cruel</a></td>
+			<td>Ko Lay</td>
+			<td>9</td>
+			<td>Story</td>
+		</tr>
+	     <tr>
+			<td>42.</td>
+			<td><a href="Story2.html">Stupid Rabbit</a></td>
+			<td>Nway Nway</td>
+			<td>4</td>
+			<td>Story</td>
+		</tr>
+		<tr>
+			<td>43.</td>
+			<td><a href="Story3.html">A Greedy Lion</a></td>
+			<td>Anonymous</td>
+			<td>8</td>
+			<td>Story</td>
+		</tr>
+		<tr>
+			<td>44.</td>
+			<td><a href="Story4.html">Lion and Little Mouse</a></td>
+			<td>Thar Htwe</td>
+			<td>6</td>
+			<td>Story</td>
+		</tr>
+		<tr>
+			<td>45.</td>
+			<td><a href="Story5.html">The Merchant and the Donkey</a></td>
+			<td>A Lain Mar</td>
+			<td>7</td>
+			<td>Story</td>
+		</tr>
+		<tr>
+			<td>46.</td>
+			<td><a href="Translate1.html">Lanzarote</a></td>
+			<td>Moe Thet Han</td>
+			<td>5</td>
+			<td>Translate</td>
+		</tr>
+     	<tr>
+			<td>47.</td>
+			<td><a href="Translate2.html">The Brothers KARAMAZOV</a></td>
+			<td>Natt Nwe</td>
+			<td>6</td>
+			<td>Translate</td>
+		</tr>
+		<tr>
+			<td>48.</td>
+			<td><a href="Translate3.html">Parpillon and Banco</a></td>
+			<td>U Hla Win</td>
+			<td>3</td>
+			<td>Translate</td>
+		</tr>
+		<tr>
+			<td>49.</td>
+			<td><a href="Translate4.html">The Godfather</a></td>
+			<td>Nay Win</td>
+			<td>4</td>
+			<td>Translate</td>
+		</tr>
+		<tr>
+			<td>50.</td>
+			<td><a href="Translate5.html">Destination Chungking</a></td>
+			<td>Kyaw Aung</td>
+			<td>10</td>
+			<td>Translate</td>
+		</tr>
+	</table>
+</form>
+</div>
+
+
+
+	<script type="text/javascript">
+
+		function dell()
+		{
+				var darkColor=document.getElementById("sir");
+				darkColor.classList.toggle("dark-mode");
+		}
+
+	var i=0;
+	var images=[];
+	var time=2000;
+
+	images[0]="Fiction4.1.jpg";
+	images[1]="Fiction4.2.png";
+   images[1].width="50px";
+
+	function change(){
+		document.slide.src= images[i];
+		if(i<images.length-1)
+		{
+			i++;
+		}
+		else
+		{
+			i=0;
+		}
+		setTimeout("change()",time);
+	}
+	window.onload=change;
+
+	var rev=document.getElementById("d2");
+	rev.onclick=function(event){
+		var tarea=document.createElement("textarea");
+		
+		tarea.rows="12";
+		tarea.cols="50";
+		tarea.id="f";
+		var time=0;
+		document.getElementById("reviewArea").appendChild(tarea);
+		var area=document.getElementById("f");
+		if(area.autofocus!==true) {
+			area.focus();
+			time++;
+		}
+		if (time==1){
+			rev.onclick=null;
+		}
+		var appp=document.createElement("input");
+			appp.type="text";
+			appp.id="app";
+			appp.placeholder="Enter Your name";
+		document.getElementById("reviewName").appendChild(appp);
+
+		var bookname=document.createElement("input");
+			bookname.type="text";
+			bookname.id="bname";
+			bookname.placeholder="Enter Your Book Name";
+		document.getElementById("reviewBookName").appendChild(bookname);
+
+		var linkk=document.createElement("a");
+		linkk.href="review.html";
+		var bb=document.createElement("input");
+		
+		bb.type="button";
+		bb.value="send";
+		
+
+		bb.id="sendbutton";
+		linkk.appendChild(bb);
+		document.getElementById("reviewsend").appendChild(linkk);
+		var bart;
+		var bell;
+		var ball;
+		var fk;
+		bb.onclick=function(){
+				
+				
+				bart=document.getElementById("app").value;
+				sessionStorage.setItem("first",bart);
+				
+				bell=document.getElementById("bname").value;
+				sessionStorage.setItem("second",bell);
+
+				ball=document.getElementById("f").value;
+				sessionStorage.setItem("third",ball);
+				
+		}
+	};
+
+
+
+	var BorrowId=document.getElementById("d1");
+	BorrowId.onclick=function(){
+	var currentValue=document.getElementById("current").innerHTML;
+	document.getElementById("ruleAndForm").classList.toggle("ruleAndForm");
+	
+	if(currentValue==0){
+		document.getElementById("comfirmMessage").innerHTML="Sorry!None at the moment.<br>You can borrow after three days";
+		document.getElementById("comfirmMessage").style.color="red";
+	}
+		else
+			{
+				document.getElementById("comfirmMessage").innerHTML="You can borrow.<br>If you will borrow this book,fill your information.";
+				document.getElementById("comfirmMessage").style.color="green";
+				var sub=parseInt(currentValue);
+				document.getElementById("current").innerHTML=sub-1;
+
+				var ruleForm=document.createElement("form");
+				var t=document.createElement("table");
+		var tb=document.createElement("tbody");
+		t.border=0;
+		t.width="500px";
+		t.id="formTable";
+
+		tb.insertRow(0);
+		tb.rows[0].insertCell(0);
+		tb.rows[0].cells[0].appendChild(document.createTextNode("Name"));
+		tb.rows[0].insertCell(1);
+		var textBox1=document.createElement("input");
+		textBox1.type="text";
+		textBox1.id="nameData";
+		tb.rows[0].cells[1].appendChild(textBox1);
+
+		tb.insertRow(1);
+		tb.rows[1].insertCell(0);
+		tb.rows[1].cells[0].appendChild(document.createTextNode("PhoneNo"));
+		tb.rows[1].insertCell(1);
+		var textBox=document.createElement("input");
+		textBox.type="text";
+		textBox.id="phoneNoData";
+		tb.rows[1].cells[1].appendChild(textBox);
+
+		tb.insertRow(2);
+		tb.rows[2].insertCell(0);
+		tb.rows[2].cells[0].appendChild(document.createTextNode("Address"));
+		tb.rows[2].insertCell(1);
+		var textBox=document.createElement("input");
+		textBox.type="text";
+		textBox.id="addressData";
+		tb.rows[2].cells[1].appendChild(textBox);
+		
+
+
+		tb.insertRow(3);
+		tb.rows[3].insertCell(0);
+		
+		tb.rows[3].cells[0].appendChild(document.createTextNode("Date:"));
+		tb.rows[3].insertCell(1);
+		var ddmmyy=document.createElement("input");
+		ddmmyy.type="date";
+		
+		ddmmyy.id="da";
+
+		
+		tb.rows[3].cells[1].appendChild(ddmmyy);
+
+
+		tb.insertRow(4);
+		tb.rows[4].insertCell(0);
+		var cancel=document.createElement("input");
+		cancel.type="reset";
+		cancel.id="can";
+		cancel.value="Cancel";
+		tb.rows[4].cells[0].appendChild(cancel);
+		tb.rows[4].insertCell(1);
+		var send=document.createElement("input");
+		send.type="button";
+		send.value="Send";
+		send.id="se";
+		tb.rows[4].cells[1].appendChild(send);
+
+		
+
+		t.appendChild(tb);
+		ruleForm.appendChild(t);
+		document.getElementById("ruleAndForm").appendChild(ruleForm);
+
+		if(textBox1.autofocus!==true){textBox1.focus();}
+	
+				
+			}
+
+	
+
+			
+	
+	
+	var rot=document.getElementById("se");
+	
+	var name;
+	var ph;
+	var add;
+	var result1,result2,result3,result4;
+	var d;
+	rot.onclick=function(){
+		name=document.getElementById("nameData").value;
+		 ph=document.getElementById("phoneNoData").value;
+		 add=document.getElementById("addressData").value;
+		 d=document.getElementById("da").value;
+		 localStorage.setItem("Name",name);
+		localStorage.setItem("Phone",ph);
+		localStorage.setItem("Address",add);
+		localStorage.setItem("Date",d);
+		result1=localStorage.getItem("Name");
+		result2=localStorage.getItem("Phone");
+		result3=localStorage.getItem("Address");
+		result4=localStorage.getItem("Date");
+		
+		var d1=new Date();
+		var d2=d1.getDate();
+		var d3=d2+=4;
+		var d4=d1.getMonth();
+		
+		var d6=d1.getFullYear();
+		
+
+		alert("Confirm.\n"+"Your Name is "+result1+".\n"+"Your Phone Number is "+result2+".\n"+"Your Address is "+result3+".\n"+"You must pay back "+d4+"/"+d3+"/"+d6);
+
+	};
+	BorrowId.onclick=null;
+	}
+	
+	function relatedBook(){
+		window.open("FictionRelated4.html","Location","width=500px,height=400px,top=200px");
+	}
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<title></title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<style type="text/css">
+		#top{position: fixed;
+				width: 100%;
+				top: 0;
+				right: 0;
+				z-index: 900;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 20px 100px;
+				transition: 0.5s;
+				background-color: orange;
+				height: 80px;
+				}
+				section{padding: 4.5rem 0 1.5rem;}
+			.conatiner{
+	width: 100%;
+	min-height: 400px;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	background-color: #dc7633;
+}
+			.conatiner img{
+	position: absolute;
+	margin-top: 100px;
+	object-fit: cover;
+	object-position: center;
+	z-index: -1;
+	cursor: pointer;
+	
+
+}
+.conatiner1{
+	width: 100%;
+	min-height: 400px;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	background-color: #dc7633;
+}
+.conatiner1 img{
+	position: absolute;
+	margin-top: 100px;
+	object-fit: cover;
+	object-position: center;
+	z-index: -1;
+	cursor: pointer;
+	
+
+}
+
+.conatiner2{
+	width: 100%;
+	min-height: 400px;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	background-color: #dc7633;
+}
+.conatiner2 img{
+	position: absolute;
+	margin-top: 100px;
+	object-fit: cover;
+	object-position: center;
+	z-index: -1;
+	cursor: pointer;
+	
+
+}
+
+		#icons1{padding-right: 20px;}
+
+		#icons2{padding-right: 20px;}
+
+		#icons{display: flex;justify-content: space-between;}
+
+		
+
+		#searchbox{border-radius: 10px;background-color: skyblue;border: none;}	
+
+		.slide1-of-1{margin-left: 400px;}
+
+		.slide1-of-2{margin-left: 700px;border-radius: 20px;}
+
+		#h1{width: 80px;height: 80px;margin-left: 5px;}
+
+		#h1{margin-top: 5px;border-radius: 80px;}
+
+		ul{list-style: none;text-align: center;}
+		ul li{display: inline-block;position: relative;}
+		ul li a{display: block;padding: 10px 15px;text-decoration: none;}
+
+		ul li ul.dropdown li{display: block;}
+		ul li ul.dropdown{width: auto;position: absolute;display: none;}
+		
+		ul li:hover ul.dropdown{display: block;width: auto;}
+
+		#list2,#list3,#list4,#list5{margin-left: 50px;font-family: Cursive;font-size: 20px;}
+		#list1{font-family: Cursive;font-size: 20px;}
+
+		#b{border-radius: 20px;background-color: skyblue;}
+		#b1{background-color: orange;border: none;}
+		
+		#text1{margin-top: 300px;}
+
+		.dark-mode{background-color: skyblue;}
+		#dark{cursor: pointer;}
+		#changeBodyBackgroundColor{border: none;background-color: orange;}
+
+		#b1{background-color: orange;border: none;}
+
+		#searchbox{border-radius: 10px;}
+
+		#icons1:hover input{width: 200px;background-color: skyblue;}
+
+		#icons1 input{width: 0;outline: none;border: none;font-weight: 500px;transition: 0.8s;background: transparent;}
+		#aKyiTaw{height: 500px;}
+		#aKyiTawBook{display: flex;margin-left: 200px;margin-top: 50px;}
+		#aKyiTawBook2,#aKyiTawBook3,#aKyiTawBook4,#aKyiTawBook5{margin-left: 30px;border-radius: 5px;box-shadow: 0px 2px 10px rgba(0,0,0,0.3);width: 200px;}
+		#aKyiTawBook1{border-radius: 5px;box-shadow: 0px 2px 10px rgba(0,0,0,0.3);}
+		#aKyiTawBook1{transition: 0.3s;width: 200px;}
+		#aKyiTawBook1 img{margin-left: 10px;}
+		#aKyiTawBook1:hover{transform: scale(1.1);z-index: 3;}
+
+		#aKyiTawBook2{transition: 0.3s;}
+		#aKyiTawBook2 img{margin-left: 10px;}
+		#aKyiTawBook2:hover{transform: scale(1.1);z-index: 3;}
+
+		#aKyiTawBook3{transition: 0.3s;}
+		#aKyiTawBook3 img{margin-left: 10px;}
+		#aKyiTawBook3:hover{transform: scale(1.1);z-index: 3;}
+
+		#aKyiTawBook4{transition: 0.3s;}
+		#aKyiTawBook4 img{margin-left: 10px;}
+		#aKyiTawBook4:hover{transform: scale(1.1);z-index: 3;}
+
+		#aKyiTawBook5{transition: 0.3s;}
+		#aKyiTawBook5 img{margin-left: 10px;}
+		#aKyiTawBook5:hover{transform: scale(1.1);z-index: 3;}
+
+		#detil1{display: none;}
+
+		#detil1:hover{transition: 0.2s all linear;}
+
+		#aKyiTawBook1:hover #detil1{display:block; transition: 0.2s all linear;float: right;margin-right: 20px;font-size: 20px;}
+
+		#detil2{display: none;}
+
+		#detil2:hover{transition: 0.2s all linear;}
+
+		#aKyiTawBook2:hover #detil2{display: block;transition: 0.2s all linear;float: right;margin-right: 20px;font-size: 20px;}
+
+		#detil3{display: none;}
+
+		#detil3:hover{transition: 0.2s all linear;}
+
+		#aKyiTawBook3:hover #detil3{display: block;transition: 0.2s all linear;float: right;margin-right: 20px;font-size: 20px;}
+
+		#detil4{display: none;}
+
+		#detil4:hover{transition: 0.2s all linear;}
+
+		#aKyiTawBook4:hover #detil4{display: block;transition: 0.2s all linear;float: right;margin-right: 20px;font-size: 20px;}
+
+		#detil5{display: none;}
+
+		#detil5:hover{transition: 0.2s all linear;}
+
+		#aKyiTawBook5:hover #detil5{display: block;transition: 0.2s all linear;float: right;margin-right: 20px;font-size: 20px;}
+
+		#text1{margin-top: 200px;}
+
+		#slideBook1{float: right;margin-left: 300px;}
+
+		.slide1-of-1{
+	margin-left: 500px;}
+
+	.slide1-of-2{margin-left: 700px;}
+
+
+
+
+	</style>
+	</head>
+	<body id="google">
+		<div >
+			<div id="top">
+			<div><img src="project5.jpg" width="90px" height="90px" id="h1"></div>
+			<ul>
+				<li id="list1"><a href="home.html">Home</a></li>
+				<li id="list2"><a href="Login.html">Logout</a></li>
+				<li id="list3"><a href="">Author</a>
+					<ul class="dropdown">
+						<div id="b">
+						<li><a href="AKyiTaw.html">AKyiTaw</a></li>
+						<li><a href="LoonHtarHtar.html">LoonHtarHtar</a></li>
+						<li><a href="MoeMoe.html">MoeMoe(Inya)</a></li>
+						<li><a href="ThoeSaung.html">ThoeSaung</a></li>
+						<li><a href="MonHalsey.html">MonHalsey</a></li>
+					</div>
+					</ul>
+				</li>
+				<li id="list4"><a href="review.html">Review</a></li>
+				<li id="list5"><a href="contact.html">About us</a></li>
+			</ul>
+		<div id="icons">
+		<div id="icons1">
+			<input type="search" name="s1" placeholder="search" id="searchbox">
+		<button id="b1" onclick="search()"><a href="#"><i class="glyphicon glyphicon-search"></i></a></button>
+		</div>
+
+		<div id="icons3">
+		<button onclick="dell()" id="changeBodyBackgroundColor"><i class="glyphicon glyphicon-adjust"></i></button>
+		</div>
+	</div>
+
+
+</div>
+	
+
+	<section class="home swiper" id="home">
+		<div class="swiper-wrapper">
+      <div class="swiper-slide conatiner">
+      
+      	
+      	<img src="areyouhappy.jpg" alt="" class="slide1-of-1" width="150px" height="200px">
+      	<img src="WriterAKyi1.jpg" alt=""  class="slide1-of-2" width="300px" height="250px">
+      </div>
+      
+
+      <div class="swiper-slide conatiner1">
+      	<img src="lupyo.jpg" alt="" class="slide1-of-1" width="150px" height="200px">
+      	<img src="WriterAKyi1.jpg" alt=""  class="slide1-of-2" width="300px" height="250px">
+      </div>
+
+      
+      <div class="swiper-slide conatiner2">
+      	<img src="zawgyi.jpg" alt="" class="slide1-of-1" width="150px" height="200px">
+      	<img src="WriterAKyi1.jpg" alt=""  class="slide1-of-2" width="300px" height="250px">
+      	
+      </div>
+      </div>
+    
+    <div class="swiper-pagination"></div>
+	</section>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+		<script src="main.js"></script>
+<div id="aKyiTaw">
+	<div id="aKyiTawBook">
+		<div id="aKyiTawBook1">
+			<div id="detil1"><a href="Funny1.html"><i class="glyphicon glyphicon-circle-arrow-right"></i></a></div>
+				<img src="Funny1.1.jpg" width="180px" height="230px">
+				<p align="center">All kinds of</p>
+		</div>
+
+		<div id="aKyiTawBook2">
+			<div id="detil2"><a href="Funny2.html"><i class="glyphicon glyphicon-circle-arrow-right"></i></a></div>
+				<img src="Funny2.1.jpg" width="180px" height="230px">
+				<p align="center">Branch Where Spirit Stay</p>
+		</div>
+
+		<div id="aKyiTawBook3">
+			<div id="detil3"><a href="Funny3.html"><i class="glyphicon glyphicon-circle-arrow-right"></i></a></div>
+				<img src="Funny3.1.jpg" width="180px" height="230px">
+					<p align="center">Village Guy</p>
+		</div>
+
+		<div id="aKyiTawBook4">
+			<div id="detil4"><a href="Funny4.html"><i class="glyphicon glyphicon-circle-arrow-right"></i></a></div>
+				<img src="Funny4.1.jpg" width="180px" height="230px">
+					<p align="center">Old Children</p>
+		</div>
+
+		<div id="aKyiTawBook5">
+			<div id="detil5"><a href="Funnt5.html"><i class="glyphicon glyphicon-circle-arrow-right"></i></a></div>
+				<img src="Funny5.1.jpg" width="180px" height="230px">
+					<p align="center">Slicker's Village</p>
+		</div>
+	</div>
+</div>
+		
+
+</div>
+	<script type="text/javascript">
+		function dell()
+		{
+				var darkColor=document.getElementById("google");
+				darkColor.classList.toggle("dark-mode");
+		}
+		function search(){
+			var searchData=document.getElementById("searchbox").value;
+			if(searchData==="moe moe (inya)" || searchData==="Moe Moe" || searchData==="မိုးမိုး" || searchData==="မိုးမိုး(အင်းလျား)"){
+				window.open("MoeMoe.html");
+			}
+			else if(searchData==="Loon Htar Htar" || searchData==="loon htar htar" || searchData==="လွန်းထားထား"){
+				window.open("LoonHtarHtar.html");
+			}
+
+			else if(searchData==="Thoe Saung" || searchData==="thoe saung" || searchData==="သိုးဆောင်း"){
+				window.open("ThoeSaung.html");
+			}
+
+			else if(searchData==="Mon Halsey" || searchData==="mon halsey" || searchData==="မွန်ဟော်စီ"){
+				window.open("MonHalsey.html");
+			}
+			else if(searchData==="A Kyi Taw" || searchData==="a kyi taw" || searchData==="အကြည်တော်"){
+				window.open("AKyiTaw.html");
+			}
+			else
+				{alert("This isn't found.We will try to update that.")}
+			
+		}
+	</script>
+</body>
+</html>

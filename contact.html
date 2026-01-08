@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="jj.css">
+	<title></title>
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<style type="text/css">
+		#i1,#i2,#i3,#i4,#i5,#i6,#i7,#i8,#i9,#i10,#i11,#i12,#i13,#i14,#i15,#i16,#i17,#i18,#i19,#i20,#i21,#i22,#i23,#i24,#i25,#borrow1,#borrow2,#borrow3,#borrow4,#borrow5{font-size: 20px;color:grey;}
+
+		#borrow1{display: none;}
+
+		#borrow1:hover{
+						transition: 0.2s all linear;}
+
+		#changeColor1:hover #borrow1{
+			display: block;
+			transition: 0.2s all linear;
+			color: orange;
+		}
+		#h1{width: 80px;height: 80px;margin-left: 5px;}
+		#h1{margin-top: 5px;border-radius: 80px;}
+		ul{list-style: none;text-align: center;}
+		ul li{display: inline-block;position: relative;}
+		ul li a{display: block;padding: 10px 15px;text-decoration: none;}
+
+		ul li ul.dropdown li{display: block;}
+		ul li ul.dropdown{width: auto;position: absolute;display: none;}
+		
+		ul li:hover ul.dropdown{display: block;width: auto;}
+		#list2,#list3,#list4,#list5{margin-left: 50px;font-family: Cursive;font-size: 20px;}
+		#list1{font-family: Cursive;font-size: 20px;}
+
+		#b{border-radius: 20px;background-color: skyblue;}
+		
+		#text1{margin-top: 200px;}
+
+		#slideBook{float: right;margin-right: 300px;}
+
+		.dark-mode{background-color: skyblue;}
+		button{cursor: pointer;}
+		#changeBodyBackgroundColor{border: none;background-color: orange;}
+
+		#b1{background-color: orange;border: none;}
+
+		#searchbox{border-radius: 10px;}
+
+		#icons1:hover input{width: 200px;background-color: skyblue;}
+
+		#icons1 input{width: 0;outline: none;border: none;font-weight: 500px;transition: 0.8s;background: transparent;}
+		#all{margin-top: 150px; margin-left: 90px;margin-right: 90px;}
+		#allcolor{background-color: orange; height: 400px;}
+		
+		#picture{float: left; position: absolute;margin-left: 180px;margin-top: 90px;border-radius: 20px;}
+		#picture2{position: absolute;margin-left: 300px;margin-top: 50px;border-radius: 20px;}
+		#picture3{position: absolute;margin-left: 480px;margin-top: 90px;border-radius: 20px;}
+		
+		#rightside{float: right;margin-right: 300px;margin-top: 150px;}
+		#bottom{display: flex;justify-content:space-around;margin-top: 12px;width: 500px;margin-left: 500px;}
+		#last{margin-top: 12px;margin-left: 650px; text-transform: uppercase;}
+		#ab{display: none;};
+		#onee{border-radius: 20px;border-bottom: 1px solid skyblue; background-color: skyblue;};
+		#twoe{border: none;border-bottom: 1px solid skyblue;background-color: skyblue;};
+		#threee{border: none;border-bottom: 1px solid skyblue;background-color: skyblue;};
+		#top{position: fixed;
+	width: 100%;
+	top: 0;
+	right: 0;
+	z-index: 900;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px 100px;
+	transition: 0.5s;
+	background-color: orange;
+	height: 80px;
+	}		
+		p{width: 300px;}
+
+	</style>
+	</head>
+	<body id="ChangeColor">
+		<div id="google">
+		<div id="top">
+			<div><img src="project5.jpg" width="90px" height="90px" id="h1"></div>
+			<ul>
+				<li id="list1"><a href="home.html">Home</a></li>
+				<li id="list2"><a href="Login.html">Logout</a></li>
+				<li id="list3"><a href="">Author</a>
+					<ul class="dropdown">
+						<div id="b">
+						<li><a href="AKyiTaw.html">AKyiTaw</a></li>
+						<li><a href="LoonHtarHtar.html">LoonHtarHtar</a></li>
+						<li><a href="MoeMoe.html">MoeMoe(Inya)</a></li>
+						<li><a href="ThoeSaung.html">ThoeSaung</a></li>
+						<li><a href="MonHalsey.html">MonHalsey</a></li>
+					</div>
+					</ul>
+				</li>
+				<li id="list4"><a href="review.html">Review</a></li>
+				<li id="list5"><a href="contact.html">About us</a></li>
+			</ul>
+		<div id="icons">
+		<div id="icons1">
+			<input type="search" name="s1" placeholder="search" id="searchbox">
+		<button id="b1" onclick="search()"><a href="#"><i class="glyphicon glyphicon-search"></i></a></button>
+		</div>
+
+		
+		<div id="icons3">
+		<button onclick="dell()" id="changeBodyBackgroundColor"><i class="glyphicon glyphicon-adjust"></i></button>
+		</div>
+	</div>
+
+</div>
+<div id="all">	
+<div id="allcolor">
+	
+	<img src="best-contact-us-pages-3.jpg" id="picture" width="200px">
+	<img src="contact-us-2-62fa2cc2edbaf-sej-1280x720(0).png" id="picture2" width="200px">
+	<img src="IMG_20230914_100652.jpg" width="200px" id="picture3">
+	
+<div id="rightside">
+	<p>Thanks for using our library website.You always accessible as needed and we'll always there for you.If you have anything to ask about our library,please contact us.</p>
+	
+</div>
+</div>
+<div id="bottom">
+	<label><i class="glyphicon glyphicon-earphone"></i>&nbsp;&nbsp;Phone<br><label>09-670997177</label></label>
+	<label><i class="glyphicon glyphicon-envelope"></i>&nbsp;&nbsp;Email<br><label>hkhin799@gmail.com</label></label>
+	<label><i class="glyphicon glyphicon-map-marker"></i>&nbsp;&nbsp;Address<br><label>Pyay</label></label>
+</div>
+
+</div>
+</div>
+
+
+
+<div id="imgee"></div>
+<script type="text/javascript">
+	function dell()
+		{
+				var darkColor=document.getElementById("ChangeColor");
+				darkColor.classList.toggle("dark-mode");
+		}
+
+
+	
+		
+	
+
+</script>
+
+
+</body>
+</html>

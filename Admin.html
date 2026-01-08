@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<style type="text/css">
+		#top{position: fixed;
+				width: 100%;
+				top: 0;
+				right: 0;
+				z-index: 900;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 20px 100px;
+				transition: 0.5s;
+				background-color: orange;
+				height: 80px;
+				}
+				section{padding: 4.5rem 0 1.5rem;}
+			
+#icons1{padding-right: 20px;}
+
+		#icons2{padding-right: 20px;}
+
+		#icons{display: flex;justify-content: space-between;}
+
+		
+
+		#searchbox{border-radius: 10px;background-color: skyblue;border: none;}	
+
+		.slide1-of-1{margin-left: 500px;}
+
+		.slide1-of-2{margin-left: 700px;border-radius: 50%;}
+
+		#h1{width: 80px;height: 80px;margin-left: 5px;}
+
+		#h1{margin-top: 5px;border-radius: 80px;}
+
+		ul{list-style: none;text-align: center;}
+		ul li{display: inline-block;position: relative;}
+		ul li a{display: block;padding: 10px 15px;text-decoration: none;}
+
+		ul li ul.dropdown li{display: block;}
+		ul li ul.dropdown{width: auto;position: absolute;display: none;}
+		
+		ul li:hover ul.dropdown{display: block;width: auto;}
+
+		#list2,#list3,#list4,#list5{margin-left: 50px;font-family: Cursive;font-size: 20px;}
+		#list1{font-family: Cursive;font-size: 20px;}
+
+		#b{border-radius: 20px;background-color: skyblue;}
+		#b1{background-color: orange;border: none;}
+		
+		#text1{margin-top: 300px;}
+
+		.dark-mode{background-color: skyblue;}
+		#dark{cursor: pointer;}
+		#changeBodyBackgroundColor{border: none;background-color: orange;}
+
+		#b1{background-color: orange;border: none;}
+
+		#searchbox{border-radius: 10px;}
+
+		#icons1:hover input{width: 200px;background-color: skyblue;}
+
+		#icons1 input{width: 0;outline: none;border: none;font-weight: 500px;transition: 0.8s;background: transparent;}
+		#aKyiTaw{height: 500px;}
+		#aKyiTawBook{display: flex;margin-left: 700px;margin-top: 50px;}
+		#aKyiTawBook2,#aKyiTawBook3,#aKyiTawBook4,#aKyiTawBook5{margin-left: 30px;border-radius: 5px;box-shadow: 0px 2px 10px rgba(0,0,0,0.3);width: 200px;}
+		#aKyiTawBook1{border-radius: 5px;box-shadow: 0px 2px 10px rgba(0,0,0,0.3);}
+		#aKyiTawBook1{transition: 0.3s;width: 200px;}
+		#aKyiTawBook1 img{margin-left: 10px;}
+		#aKyiTawBook1:hover{transform: scale(1.1);z-index: 3;}
+
+		
+
+		#detil1{display: none;}
+
+		#detil1:hover{transition: 0.2s all linear;}
+
+		#aKyiTawBook1:hover #detil1{display: block;transition: 0.2s all linear;float: right;margin-right: 20px;font-size: 20px;}
+
+		
+		#text1{margin-top: 200px;}
+
+		#slideBook1{float: right;margin-left: 300px;}
+
+		.slide1-of-1{
+	margin-left: 500px;}
+
+	.slide1-of-2{margin-left: 700px;}
+
+
+
+
+		#icons1{padding-right: 20px;}
+		#allForm{margin-top: 150px;margin-left: 500px;margin-right: 500px;}
+		fieldset{ background-color: greenyellow;}
+		body{background-color: palegoldenrod;}
+		#Bname,#Aname,#qty,#type{width: 500px;height: 30px;}
+		#bottom{margin-left: 400px;margin-top: 30px;}
+		#addToComputer{float: left; background-color: white;color: black;width: 60px;border-radius: 20px;}
+		#addToComputer:hover{background-color: black;color: white;}
+		#adminall{display: flex; float: left;width: 650px;margin-left: 80px;text-align: center;}
+		#twoee{margin-left: 130px;}
+		#threeee{margin-left: 130px;}
+		#fouree{margin-left: 50px;}
+		#fiveee{margin-left: 60px;}
+		#addToHomePage{float: right;background-color: white;color: black;width: 60px;border-radius: 20px;}
+		#addToHomePage:hover{background-color: black;color: white;}
+		
+		#t1{
+			float: left;
+			justify-content: space-between;
+			margin-left: 50px;
+			text-align: center;
+			border-right: 1px solid black;
+		}
+		#t2{
+			float: right;
+			margin-right: 50px;
+			text-align: center;
+		}
+		th{text-align: center;}
+		#allList{
+			margin-top: 50px;
+			width: auto;
+			height:1500px;
+			background-color: palegreen;
+
+		}
+
+		hr{margin-top: 50px;}
+		.text{text-transform: uppercase;font-weight: 100;font-size: 30px;text-align: center;margin-top: 200px;}
+		.text-1{--color1:rgb(44,72,150);--color2:rgb(44,150,53);--color3:rgb(53,44,150); }
+		.text-2{--color1:rgb(59,24,57);--color2:rgb(68,78,41);--color3:rgb(75,42,42); }
+		.text-3{--color1:rgb(17,196,181);--color2:rgb(196,77,30);--color3:rgb(221,38,63); }
+		.text-4{--color1:rgb(223,138,138);--color2:rgb(223,236,144);--color3:rgb(110,179,108); }
+		.myanimation{animation: coloring-text 4s linear infinite;}
+		@keyframes coloring-text{
+			0%{color:var(--color1)}
+			32%{color:var(--color1)}
+			33%{color:var(--color2)}
+			65%{color:var(--color2)}
+			66%{color:var(--color3)}
+			99%{color:var(--color3)}
+			100%{color:var(--color1)}
+			
+		}
+	</style>
+</head>
+<body id="google">
+	<div id="top">
+			<div><img src="project5.jpg" id="h1"></div>
+			<ul>
+				<li id="list1"><a href="home.html">Home</a></li>
+				<li id="list2"><a href="Login.html">Logout</a></li>
+				<li id="list3"><a href="">Author</a>
+					<ul class="dropdown">
+						<div id="b">
+						<li><a href="AKyiTaw.html">AKyiTaw</a></li>
+						<li><a href="LoonHtarHtar.html">LoonHtarHtar</a></li>
+						<li><a href="MoeMoe.html">MoeMoe(Inya)</a></li>
+						<li><a href="ThoeSaung.html">ThoeSaung</a></li>
+						<li><a href="MonHalsey.html">MonHalsey</a></li>
+						
+					</div>
+					</ul>
+				</li>
+				<li id="list4"><a href="review.html">Review</a></li>
+				<li id="list5"><a href="contact.html">About us</a></li>
+			</ul>
+		<div id="icons">
+		<div id="icons1">
+			<input type="search" name="s1" placeholder="search" id="searchbox">
+		
+		<button id="b1" onclick="search()"><a href="#"><i class="glyphicon glyphicon-search"></i></a></button>
+		</div>
+
+		
+		<div id="icons3">
+		<button onclick="dell()" id="changeBodyBackgroundColor"><i class="glyphicon glyphicon-adjust"></i></button></div>
+	</div>
+
+</div>
+
+	<div id="all">
+	<div id="horizontal-line"></div>
+	<div class="container">
+		<h2 class="text">
+			<span class="myanimation text-1">This</span>
+			<span class="myanimation text-2">is</span>
+			<span class="myanimation text-3">adamin</span>
+			<span class="myanimation text-4">page...</span>
+		</h2>
+	</div>
+	<div id="allForm">
+		<fieldset>
+		<legend>Adding Book</legend>
+			<form name="adminForm" id="adminForm" action="home.html" method="post">
+				<label>Book's Name</label><br>
+				<input type="text" name="Bname" id="Bname"><br><br><br>
+				<label>Author's Name</label><br>
+				<input type="text" name="Aname" id="Aname"><br><br><br>
+				<label>Quantity</label><br>
+				<input type="text" name="qty" id="qty"><br><br><br>
+				<label>Type</label><br>
+				<input type="text" name="type" id="type"><br><br><br>
+				<input type="button" id="addToComputer" onclick="AddToComputer()" value="add">
+				<input type="submit" id="addToHomePage" onclick="AddToHomePage()" value="home">
+			</form>
+		</fieldset>
+	</div>
+	<hr>
+<div id="allList">
+	<form name="f1" id="f1">
+	<table border="0" id="t1" name="t1" width="700px" height="800px" cellspacing="30px">
+		<tr>
+			<th>No.</th>
+			<th>Book Name</th>
+			<th>Author Name</th>
+			<th>Quantity</th>
+			<th>Type</th>
+		</tr>
+		<tr>
+			<td>1.</td>
+			<td>How do we prepare that the habit we ever forget?</td>
+			<td>Many Writers</td>
+			<td>9</td>
+			<td>Health</td>
+		</tr>
+     	<tr>
+			<td>2.</td>
+			<td>The tips to be better for your stomach</td>
+			<td>Many Writers</td>
+			<td>5</td>
+			<td>Health</td>
+		</tr>
+		<tr>
+			<td>3.</td>
+			<td>Good Habits for health</td>
+			<td>Anonymous</td>
+			<td>4</td>
+			<td>Health</td>
+		</tr>
+		<tr>
+		<td>4.</td>
+			<td>Protect to the sunlight</td>
+			<td>Many Writers</td>
+			<td>9</td>
+			<td>Health</td>
+		</tr>
+		<tr>
+			<td>5.</td>
+			<td>The symptoms don't equal cause of hormone</td>
+			<td>Anonymous</td>
+			<td>7</td>
+			<td>Health</td>
+		</tr>
+		<tr>
+			<td>6.</td>
+			<td>C++ Programming</td>
+			<td>Many Writers</td>
+			<td id="current">1</td>
+			<td>Computer</td>
+		</tr>
+     	<tr>
+			<td>7.</td>
+			<td>PHP 7</td>
+			<td>Many Writers</td>
+			<td>6</td>
+			<td>Computer</td>
+		</tr>
+		<tr>
+			<td>8.</td>
+			<td>Android Studio</td>
+			<td>Anonymous</td>
+			<td>4</td>
+			<td>Computer</td>
+		</tr>
+		<tr>
+			<td>9.</td>
+			<td>Sketch Up</td>
+			<td>U Myat Thu</td>
+			<td>7</td>
+			<td>Computer</td>
+		</tr>
+		<tr>
+			<td>10.</td>
+			<td>Autocad</td>
+			<td>Many Writers</td>
+			<td>6</td>
+			<td>Computer</td>
+		</tr>
+		<tr>
+			<td>11.</td>
+			<td>Ghost House</td>
+			<td>Sacrificer</td>
+			<td>7</td>
+			<td>Horror</td>
+		</tr>
+     	<tr>
+			<td>12.</td>
+			<td>Born Again</td>
+			<td>Tuu Hnaine Mae</td>
+			<td>5</td>
+			<td>Horror</td>
+		</tr>
+		<tr>
+			<td>13.</td>
+			<td>Black Doza on the bone hill</td>
+			<td>Zaya Kyaw Htin</td>
+			<td>8</td>
+			<td>Horror</td>
+		</tr>
+		<tr>
+			<td>14.</td>
+			<td>Dead Flowers</td>
+			<td>Thoe Saung</td>
+			<td>10</td>
+			<td>Horror</td>
+		</tr>
+		<tr>
+			<td>15.</td>
+			<td>Respondent Soul</td>
+			<td>Linn Myat Tayza</td>
+			<td>7</td>
+			<td>Horror</td>
+		</tr>
+		<tr>
+			<td>16.</td>
+			<td>New Generation</td>
+			<td>Anonymous</td>
+			<td>7</td>
+			<td>Magazine</td>
+		</tr>
+     	<tr>
+			<td>17.</td>
+			<td>External Light</td>
+			<td>Anonymous</td>
+			<td>9</td>
+			<td>Magazine</td>
+		</tr>
+		<tr>
+			<td>18.</td>
+			<td>Lady's Home</td>
+			<td>Anonymous</td>
+			<td>4</td>
+			<td>Magazine</td>
+		</tr>
+		<tr>
+			<td>19.</td>
+			<td>Adele's World</td>
+			<td>Many Writers</td>
+			<td>3</td>
+			<td>Magazine</td>
+		</tr>
+		<tr>
+			<td>20.</td>
+			<td>BTS SUGA Fashion show</td>
+			<td>Many Writers</td>
+			<td>7</td>
+			<td>Magazine</td>
+		</tr>
+		<tr>
+		<td>21.</td>
+			<td>Short Fiction No.3</td>
+			<td>Moe Moe(inlya)</td>
+			<td>7</td>
+			<td>Fiction</td>
+		</tr>
+     	<tr>
+			<td>22.</td>
+			<td>Oh!My Dear</td>
+			<td>Thoe Saung</td>
+			<td>4</td>
+			<td>Fiction</td>
+		</tr>
+		<tr>
+			<td>23.</td>
+			<td>Healthy Divorce</td>
+			<td>Mon Halsey</td>
+			<td>6</td>
+			<td>Fiction</td>
+		</tr>
+		<tr>
+			<td>24.</td>
+			<td>Rain Here</td>
+			<td>Thoe Saung</td>
+			<td>5</td>
+			<td>Fiction</td>
+		</tr>
+		<tr>
+			<td>25.</td>
+			<td>Widow Village</td>
+			<td>Thoe Saung</td>
+			<td>6</td>
+			<td>Fiction</td>
+		</tr>
+		
+	</table>
+		<table border="0" id="t2" width="700px" height="1000px" cellspacing="30px">
+			<tr>
+			<th>No.</th>
+			<th>Book Name</th>
+			<th>Author Name</th>
+			<th>Quantity</th>
+			<th>Type</th>
+		</tr>
+			<tr>
+			<td>26.</td>
+			<td>Youth and Politics</td>
+			<td>Htet Myat</td>
+			<td>7</td>
+			<td>History</td>
+		</tr>
+     	<tr>
+			<td>27.</td>
+			<td>Democracy</td>
+			<td>Shwe Ku May Hnin</td>
+			<td>4</td>
+			<td>History</td>
+		</tr>
+		<tr>
+			<td>28.</td>
+			<td>Reader's guide to the Marxist Classice</td>
+			<td>Kyaw Aung</td>
+			<td>7</td>
+			<td>History</td>
+		</tr>
+		<tr>
+			<td>29.</td>
+			<td>Morr Si Tone</td>
+			<td>Tin Htun Naing</td>
+			<td>8</td>
+			<td>History</td>
+		</tr>
+		<tr>
+			<td>30.</td>
+			<td>Gandhi</td>
+			<td>Aung Aye</td>
+			<td>7</td>
+			<td>History</td>
+		</tr>
+		
+		<tr>
+			<td>31.</td>
+			<td>All kinds of</td>
+			<td>A Kyi Taw</td>
+			<td>5</td>
+			<td>Funny</td>
+		</tr>
+		<tr>
+			<td>32.</td>
+			<td>Branch Where Spirit Stay</td>
+			<td>A Kyi Taw</td>
+			<td>6</td>
+			<td>Funny</td>
+		</tr>
+		<tr>
+			<td>33.</td>
+			<td>Slicker's Village</td>
+			<td>A Kyi Taw</td>
+			<td>4</td>
+			<td>Funny</td>
+		</tr>
+		<tr>
+			<td>34.</td>
+			<td>Village Guy</td>
+			<td>A Kyi Taw</td>
+			<td>8</td>
+			<td>Funny</td>
+		</tr>
+		<tr>
+			<td>35.</td>
+			<td>Old Children</td>
+			<td>A Kyi Taw</td>
+			<td>8</td>
+			<td>Funny</td>
+		</tr>
+		<tr>
+			<td>36.</td>
+			<td>My Heart</td>
+			<td>Shin Ma</td>
+			<td>7</td>
+			<td>Love Story</td>
+		</tr>
+		<tr>
+			<td>37.</td>
+			<td>Warm Because of his sunshine</td>
+			<td>Shin Ma</td>
+			<td>6</td>
+			<td>Love Story</td>
+		</tr>
+		<tr>
+			<td>38.</td>
+			<td>Short Bond</td>
+			<td>Swal Mat Shin</td>
+			<td>9</td>
+			<td>Love Story</td>
+		</tr>
+		<tr>
+			<td>39.</td>
+			<td>Poison Mom</td>
+			<td>Nay Nwe Zin Myint</td>
+			<td>6</td>
+			<td>Love Story</td>
+		</tr>
+		<tr>
+			<td>40.</td>
+			<td>Sea and Sky Blue</td>
+			<td>Loon Htar Htar</td>
+			<td>3</td>
+			<td>Love Story</td>
+		</tr>
+		<tr>
+			<td>41.</td>
+			<td>Kind and Cruel</td>
+			<td>Ko Lay</td>
+			<td>9</td>
+			<td>Story</td>
+		</tr>
+	     <tr>
+			<td>42.</td>
+			<td>Stupid Rabbit</td>
+			<td>Nway Nway</td>
+			<td>4</td>
+			<td>Story</td>
+		</tr>
+		<tr>
+			<td>43.</td>
+			<td>A Greedy Lion</td>
+			<td>Anonymous</td>
+			<td>8</td>
+			<td>Story</td>
+		</tr>
+		<tr>
+			<td>44.</td>
+			<td>Lion and Little Mouse</td>
+			<td>Thar Htwe</td>
+			<td>6</td>
+			<td>Story</td>
+		</tr>
+		<tr>
+			<td>45.</td>
+			<td>The Merchant and the Donkey</td>
+			<td>A Lain Mar</td>
+			<td>7</td>
+			<td>Story</td>
+		</tr>
+		<tr>
+			<td>46.</td>
+			<td>Lanzarote</td>
+			<td>Moe Thet Han</td>
+			<td>5</td>
+			<td>Translate</td>
+		</tr>
+     	<tr>
+			<td>47.</td>
+			<td>The Brothers KARAMAZOV</td>
+			<td>Natt Nwe</td>
+			<td>6</td>
+			<td>Translate</td>
+		</tr>
+		<tr>
+			<td>48.</td>
+			<td>Parpillon and Banco</td>
+			<td>U Hla Win</td>
+			<td>3</td>
+			<td>Translate</td>
+		</tr>
+		<tr>
+			<td>49.</td>
+			<td>The Godfather</td>
+			<td>Nay Win</td>
+			<td>4</td>
+			<td>Translate</td>
+		</tr>
+		<tr>
+			<td>50.</td>
+			<td>Destination Chungking</td>
+			<td>Kyaw Aung</td>
+			<td>10</td>
+			<td>Translate</td>
+		</tr>
+		
+	</table>
+	
+</form>
+<div id="adminall">
+	<div id="oneee"></div>
+	<div id="twoee"></div>
+	<div id="threeee"></div>
+	<div id="fouree"></div>
+	<div id="fiveee"></div>
+	</div>
+
+</div>
+
+	
+
+	<script type="text/javascript">
+		function dell()
+		{
+				var darkColor=document.getElementById("google");
+				darkColor.classList.toggle("dark-mode");
+		}
+		var non;
+		var num;
+		var bookName;
+		var authorName;
+		var Quantity;
+		var Type;
+		var pi;
+		 var pa;
+		function AddToComputer(){
+			non=document.createElement("span");
+			num=document.createTextNode("51");
+			non.appendChild(num);
+		 bookName=document.getElementById("Bname").value;
+		 authorName=document.getElementById("Aname").value;
+		 Quantity=document.getElementById("qty").value;
+		 Type=document.getElementById("type").value;
+		sessionStorage.setItem("n",bookName);
+		sessionStorage.setItem("a",authorName);
+		sessionStorage.setItem("q",Quantity);
+		sessionStorage.setItem("t",Type);
+		document.getElementById("oneee").appendChild(non);
+		document.getElementById("twoee").innerHTML=sessionStorage.getItem("n");
+		document.getElementById("threeee").innerHTML=sessionStorage.getItem("a");
+		document.getElementById("fouree").innerHTML=sessionStorage.getItem("q");
+		document.getElementById("fiveee").innerHTML=sessionStorage.getItem("t");
+	}
+	var bookname;
+	function AddToHomePage(){
+		bookname=document.getElementById("Bname").value;
+		sessionStorage.setItem("n",bookname);
+		
+	}
+	
+
+	</script>
+
+</body>
+</html>

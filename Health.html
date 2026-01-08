@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		
+	</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<style type="text/css">
+
+		#translateRow1Col1{transition: 0.3s;}
+
+		#translateRow1Col1:hover{
+		transform: scale(1.1);
+		z-index: 3;}
+
+		#translateRow1Col2{transition: 0.3s;}
+
+		#translateRow1Col2:hover{
+		transform: scale(1.1);
+		z-index: 3;}
+
+		#translateRow1Col3{transition: 0.3s;}
+
+		#translateRow1Col3:hover{
+		transform: scale(1.1);
+		z-index: 3;}
+
+		#translateRow2Col1{transition: 0.3s;}
+
+		#translateRow2Col1:hover{
+		transform: scale(1.1);
+		z-index: 3;}
+
+		#translateRow2Col2{transition: 0.3s;}
+
+		#translateRow2Col2:hover{
+		transform: scale(1.1);
+		z-index: 3;}
+
+#top{position: fixed;
+	width: 100%;
+	top: 0;
+	right: 0;
+	z-index: 900;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px 100px;
+	transition: 0.5s;
+	background-color: orange;
+	height: 80px;
+	}		
+
+#icons1:hover input{width: 200px;background-color: skyblue;}
+
+#icons1 input{width: 0;outline: none;border: none;font-weight: 500px;transition: 0.8s;background: transparent;}
+
+.dark-mode{background-color: skyblue;}
+		
+button{cursor: pointer;}
+		
+#changeBodyBackgroundColor{border: none;background-color: orange;}
+
+#list2,#list3,#list4,#list5{margin-left: 50px;font-family: Cursive;font-size: 20px;}
+		#list1{font-family: Cursive;font-size: 20px;}
+
+
+#icons1,#icons2{padding-right: 20px;
+}
+	
+#icons{
+	display: flex;
+	flex-direction: row;
+	;
+}
+#b1{
+	background-color: orange;
+	border: none;
+	
+}
+#searchbox{
+	border-radius: 10px;
+	background-color: skyblue;
+	border: none;
+}
+		#all{
+			width: 1100px;
+			height: 800px;
+			margin-left: auto;
+			margin-right: auto;
+			
+			
+			
+		}
+
+		#d1,#d2,#d3,#d4,#d5,#d6,#d7,#d8,#d9,#d10{
+			border: 0px;
+			
+			border-radius: 2px;
+			width: 150px;
+			height: 50px;
+
+		}
+		
+		#d{
+			margin-top: 40px;
+			margin-left: 50px;
+			width: 150px;
+			
+			border: 1px solid black;
+		}
+		#d0{
+			
+			overflow: scroll;
+			overflow-x: hidden;
+			height: 500px;
+			box-sizing: content-box;
+		}
+
+		 button:hover{
+			
+
+			background-color: white;}
+		#d3{background-color: white;}
+
+		#allbook{
+			float: right;
+			margin-right: 80px;
+			
+		}
+
+		#translateRow1{display: flex;
+						flex-direction: row;
+						height: 400px;
+						margin-top: 40px;
+						}
+
+		#translateRow2{display: flex;
+						flex-direction: row;
+						
+						}
+
+		#translateRow1Col2,#translateRow1Col1{margin-right: 100px;}
+
+		#translateRow2Col1{margin-left: 150px;}
+
+		#translateRow2Col2{margin-left: 100px;}
+		
+		 img{
+			width: 150px;
+			height: 200px;
+		}
+		#h1{width: 80px;height: 80px;}
+		 #horizontal-line{border-top:1px solid black;width: 1000px;height: 1px;margin-top: 100px;margin-left: 20px;}
+		}
+
+		#i1,#i2,#i3,#i4,#i5,#i6,#i7,#i8,#i9,#i10,#i11,#i12,#i13,#i14,#i15,#i16,#i17,#i18,#i19,#i20,#i21,#i22,#i23,#i24,#i25,#borrow1,#borrow2,#borrow3,#borrow4,#borrow5{font-size: 20px;color:grey;}
+
+		#changeColor1,#changeColor2,#changeColor3,#changeColor4,#changeColor5{width: 200px;box-shadow: -10px 10px 30px grey;}
+
+
+
+		#borrow1{display: none;}
+
+		#borrow1:hover{
+						transition: 0.2s all linear;}
+
+		#changeColor1:hover #borrow1{
+			display: block;
+			transition: 0.2s all linear;
+			color: orange;
+		}
+
+		#borrow2{display: none;}
+
+		#borrow2:hover{
+						transition: 0.2s all linear;}
+
+		#changeColor2:hover #borrow2{
+			display: block;
+			transition: 0.2s all linear;
+			color: orange;
+		}
+
+		#borrow3{display: none;}
+
+		#borrow3:hover{
+						transition: 0.2s all linear;}
+
+		#changeColor3:hover #borrow3{
+			display: block;
+			transition: 0.2s all linear;
+			color: orange;
+		}
+
+		#borrow4{display: none;}
+
+		#borrow4:hover{
+						transition: 0.2s all linear;}
+
+		#changeColor4:hover #borrow4{
+			display: block;
+			transition: 0.2s all linear;
+			color: orange;
+		}
+
+		#borrow5{display: none;}
+
+		#borrow5:hover{
+						transition: 0.2s all linear;}
+
+		#changeColor5:hover #borrow5{
+			display: block;
+			transition: 0.2s all linear;
+			color: orange;
+		}
+
+		#total1,#total2,#total3,#total4,#total5{margin-left: 90px;}
+		#hamburger{background-color: orange;border: none;}
+
+		#h1{margin-top: 5px;border-radius: 80px;}
+
+		
+
+		ul{list-style: none;text-align: center;}
+		ul li{display: inline-block;position: relative;}
+		ul li a{display: block;padding: 10px 15px;text-decoration: none;}
+
+		ul li ul.dropdown li{display: block;}
+		ul li ul.dropdown{width: auto;position: absolute;display: none;}
+		
+		ul li:hover ul.dropdown{display: block;width: auto;}
+		#list2,#list3{margin-left: 50px;}
+		#b{border-radius: 20px;background-color: skyblue;}
+		#star100{color: gold;}
+		#star200{color: gold;}
+		#star300{color: gold;}
+		#star400{color: gold;}
+		#star500{color: gold;}
+
+	</style>
+</head>
+<body id="google">
+	
+	<div id="top">
+			<div><img src="project5.jpg" id="h1"></div>
+			<ul>
+				<li id="list1"><a href="home.html">Home</a></li>
+				<li id="list2"><a href="Login.html">Logout</a></li>
+				<li id="list3"><a href="">Author</a>
+					<ul class="dropdown">
+						<div id="b">
+						<li><a href="AKyiTaw.html">AKyiTaw</a></li>
+						<li><a href="LoonHtarHtar.html">LoonHtarHtar</a></li>
+						<li><a href="MoeMoe.html">MoeMoe(Inya)</a></li>
+						<li><a href="ThoeSaung.html">ThoeSaung</a></li>
+						<li><a href="MonHalsey.html">MonHalsey</a></li>
+						
+					</div>
+					</ul>
+				</li>
+				<li id="list4"><a href="review.html">Review</a></li>
+				<li id="list5"><a href="contact.html">About us</a></li>
+			</ul>
+		<div id="icons">
+		<div id="icons1">
+			<input type="search" name="s1" placeholder="search" id="searchbox">
+		
+		<button id="b1" onclick="search()"><a href="#"><i class="glyphicon glyphicon-search"></i></a></button>
+		</div>
+
+		
+		<div id="icons3">
+		<button onclick="dell()" id="changeBodyBackgroundColor"><i class="glyphicon glyphicon-adjust"></i></button></div>
+	</div>
+
+</div>
+
+	<div id="all">
+	<div id="horizontal-line"></div>
+
+	
+	
+	<div id="allbook">
+	<div id="translateRow1">
+		<div id="translateRow1Col1">
+			<button id="changeColor1">
+				<img src="Health1.1.jpg"><br><br>
+				<p>How do we prepare that the habit we ever forget?</p>
+				<i class="glyphicon glyphicon-star" id="i1"></i>
+				<i class="glyphicon glyphicon-star" id="i2"></i>
+				<i class="glyphicon glyphicon-star" id="i3"></i>
+				<i class="glyphicon glyphicon-star" id="i4"></i>
+				<i class="glyphicon glyphicon-star" id="i5"></i><br>
+				<a href="Health1.html"><i class="glyphicon glyphicon-shopping-cart" id="borrow1">borrow..</i></a>
+			</button>
+			<div id="total1">
+				<label id="totalcount1"></label>
+				<i class="glyphicon glyphicon-star" id="star100"></i>
+			</div>
+		
+		</div>
+
+		<div id="translateRow1Col2">
+			<button id="changeColor2">
+				<img src="Health2.1.jpg"><br><br>
+				<p>The tips to be better for your stomach</p>
+				<i class="glyphicon glyphicon-star" id="i6"></i>
+				<i class="glyphicon glyphicon-star" id="i7"></i>
+				<i class="glyphicon glyphicon-star" id="i8"></i>
+				<i class="glyphicon glyphicon-star" id="i9"></i>
+				<i class="glyphicon glyphicon-star" id="i10"></i>
+				<a href="Health2.html"><i class="glyphicon glyphicon-shopping-cart" id="borrow2">borrow..</i></a>
+			</button>
+			<div id="total2">
+				<label id="totalcount2"></label>
+				<i class="glyphicon glyphicon-star" id="star200"></i>
+			</div>
+		</div>
+		<div id="translateRow1Col3">
+			<button id="changeColor3"><img src="Health3.1.jpg"><br><br>
+				<p>The tips to be better for your stomach</p>
+		
+				<i class="glyphicon glyphicon-star" id="i11"></i>
+				<i class="glyphicon glyphicon-star" id="i12"></i>
+				<i class="glyphicon glyphicon-star" id="i13"></i>
+				<i class="glyphicon glyphicon-star" id="i14"></i>
+				<i class="glyphicon glyphicon-star" id="i15"></i>
+				<a href="Health3.html"><i class="glyphicon glyphicon-shopping-cart" id="borrow3">borrow..</i></a>
+			</button>
+			<div id="total3">
+				<label id="totalcount3"></label>
+				<i class="glyphicon glyphicon-star" id="star300"></i>
+			</div>
+		</div>
+		
+			
+		
+	</div>
+
+	
+		
+
+	<div id="translateRow2">
+		<div id="translateRow2Col1">
+			<button id="changeColor4"><img src="Health4.1.jpg"><br><br>
+				<p>Good Habits for health</p>
+				<i class="glyphicon glyphicon-star" id="i16"></i>
+				<i class="glyphicon glyphicon-star" id="i17"></i>
+				<i class="glyphicon glyphicon-star" id="i18"></i>
+				<i class="glyphicon glyphicon-star" id="i19"></i>
+				<i class="glyphicon glyphicon-star" id="i20"></i>
+				<a href="Health4.html"><i class="glyphicon glyphicon-shopping-cart" id="borrow4">borrow..</i></a>
+			</button>
+			<div id="total4">
+				<label id="totalcount4"></label>
+				<i class="glyphicon glyphicon-star" id="star400"></i>
+			</div>
+
+		</div>
+		<div id="translateRow2Col2">
+			<button id="changeColor5"><img src="Health5.1.jpg"><br><br>
+				<p>Protect to the sunlight</p>
+				<i class="glyphicon glyphicon-star" id="i21"></i>
+				<i class="glyphicon glyphicon-star" id="i22"></i>
+				<i class="glyphicon glyphicon-star" id="i23"></i>
+				<i class="glyphicon glyphicon-star" id="i24"></i>
+				<i class="glyphicon glyphicon-star" id="i25"></i>
+				<a href="Health5.html"><i class="glyphicon glyphicon-shopping-cart" id="borrow5">borrow..</i></a>
+			</button>
+			<div id="total5">
+				<label id="totalcount5"></label>
+				<i class="glyphicon glyphicon-star" id="star500"></i>
+			</div>
+		</div>
+	</div>
+</div>
+
+<form id="d" name="f1" method="post">
+		<div id="d0">
+		<button id="d1" onclick="computer()">Computer</button>
+		<button id="d2" onclick="horror()">Horror</button>
+		<button id="d3">Health</button>
+		<button id="d4" onclick="history()">History</button>
+		<button id="d5" onclick="fiction()">Fiction</button>
+		<button id="d6" onclick="tran()">Translate</button>
+		<button id="d7" onclick="story()">Story</button>
+		<button id="d8" onclick="magazine()">Magazine</button>
+		<button id="d9" onclick="lovestory()">Love Story</button>
+		<button id="d10" onclick="funny()">Funny</button>
+	</div>
+	</form>
+	
+</div>
+	<script type="text/javascript">
+
+		function dell()
+		{
+				var darkColor=document.getElementById("google");
+				darkColor.classList.toggle("dark-mode");
+		}	
+
+		function tran(){
+		
+			var a=document.getElementById('d');
+			a.action="Translate.html";
+		}
+		function computer(){
+			// body...
+			var a=document.getElementById('d');
+			a.action="Computer.html";
+		}
+		function lovestory() {
+			var a=document.getElementById('d');
+			a.action="LoveStory.html";
+			// body...
+		}
+		function history() {
+			var a=document.getElementById('d');
+			a.action="History.html";
+		}
+		function horror() {
+			var a=document.getElementById('d');
+			a.action="Horror.html";
+		}
+		function story(){
+			var a=document.getElementById('d');
+			a.action="Story.html";
+		}
+		function magazine(){
+			var a=document.getElementById('d');
+			a.action="Magazine.html";
+		}
+		function fiction(){
+			var a=document.getElementById('d');
+			a.action="Fiction.html";
+		}
+		function funny() {
+			// body...
+			var a=document.getElementById('d');
+			a.action="Funny.html";
+		}
+	
+		
+
+		var total1=0;
+		var total2=0;
+		var total3=0;
+		var total4=0;
+		var total5=0;
+
+		document.getElementById("totalcount1").innerHTML=total1;
+		document.getElementById("totalcount2").innerHTML=total2;
+		document.getElementById("totalcount3").innerHTML=total3;
+		document.getElementById("totalcount4").innerHTML=total4;
+		document.getElementById("totalcount5").innerHTML=total5;
+		var change1=document.getElementById("changeColor1");
+		change1.onmouseover=function(){
+			change1.style.backgroundColor="white";
+
+		};
+
+		change1.onmouseout=function(){
+			change1.style.backgroundColor="";
+
+
+		};
+
+		var count=0;
+
+		var star1=document.getElementById("i1");
+		star1.onclick=function(){
+			
+			count++;
+			star1.style.color="gold";
+			if(count==1)
+			{
+				total1++;
+				document.getElementById("totalcount1").innerHTML=total1;
+				
+			}
+
+		};
+
+		if(count==0)
+		{
+			document.getElementById("totalcount1").innerHTML=total1;
+		}
+
+		else if(count==2) 
+			{
+			total1--;
+			star1.style.color="grey";
+			document.getElementById("totalcount1").innerHTML=total1;
+			}
+
+
+
+		var change2=document.getElementById("changeColor2");
+		change2.onmouseover=function(){
+			change2.style.backgroundColor="#f9e79f";
+
+		};
+		change2.onmouseout=function(){
+			change2.style.backgroundColor="";
+		};
+		var star2=document.getElementById("i2");
+		star2.onclick=function(){
+			star2.style.color="gold";
+			total1++;
+			document.getElementById("totalcount1").innerHTML=total1;
+		};
+
+		var change3=document.getElementById("changeColor3");
+		change3.onmouseover=function(){
+			change3.style.backgroundColor="#d6eaf8";
+
+		};
+		change3.onmouseout=function(){
+			change3.style.backgroundColor="";
+		};
+		var star3=document.getElementById("i3");
+		star3.onclick=function(){
+			star3.style.color="gold";
+			total1++;
+			document.getElementById("totalcount1").innerHTML=total1;
+		};
+
+		var change4=document.getElementById("changeColor4");
+		change4.onmouseover=function(){
+			change4.style.backgroundColor="white";
+
+		};
+		change4.onmouseout=function(){
+			change4.style.backgroundColor="";
+		};
+		var star4=document.getElementById("i4");
+		star4.onclick=function(){
+			star4.style.color="gold";
+			total1++;
+			document.getElementById("totalcount1").innerHTML=total1;
+		};
+
+		var change5=document.getElementById("changeColor5");
+		change5.onmouseover=function(){
+			change5.style.backgroundColor="#bcaaa4";
+
+		};
+		change5.onmouseout=function(){
+			change5.style.backgroundColor="";
+		};
+		var star5=document.getElementById("i5");
+		star5.onclick=function(){
+			star5.style.color="gold";
+			total1++;
+			document.getElementById("totalcount1").innerHTML=total1;
+		};
+
+		var star6=document.getElementById("i6");
+		star6.onclick=function(){
+			star6.style.color="gold";
+			total2++;
+			document.getElementById("totalcount2").innerHTML=total2;
+		};
+
+			var star7=document.getElementById("i7");
+		star7.onclick=function(){
+			star7.style.color="gold";
+			total2++;
+			document.getElementById("totalcount2").innerHTML=total2;
+			};
+
+			var star8=document.getElementById("i8");
+		star8.onclick=function(){
+			star8.style.color="gold";
+			total2++;
+			document.getElementById("totalcount2").innerHTML=total2;
+			};
+
+			var star9=document.getElementById("i9");
+		star9.onclick=function(){
+			star9.style.color="gold";
+			total2++;
+			document.getElementById("totalcount2").innerHTML=total2;
+			};
+
+			var star10=document.getElementById("i10");
+		star10.onclick=function(){
+			star10.style.color="gold";
+			total2++;
+			document.getElementById("totalcount2").innerHTML=total2;
+			};
+
+			var star11=document.getElementById("i11");
+		star11.onclick=function(){
+			star11.style.color="gold";
+			total3++;
+			document.getElementById("totalcount3").innerHTML=total3;
+			};
+
+			var star12=document.getElementById("i12");
+		star12.onclick=function(){
+			star12.style.color="gold";
+			total3++;
+			document.getElementById("totalcount3").innerHTML=total3;
+			};
+
+			var star13=document.getElementById("i13");
+		star13.onclick=function(){
+			star13.style.color="gold";
+			total3++;
+			document.getElementById("totalcount3").innerHTML=total3;
+			};
+
+			var star14=document.getElementById("i14");
+		star14.onclick=function(){
+			star14.style.color="gold";
+			total3++;
+			document.getElementById("totalcount3").innerHTML=total3;
+			};
+
+			var star15=document.getElementById("i15");
+		star15.onclick=function(){
+			star15.style.color="gold";
+			total3++;
+			document.getElementById("totalcount3").innerHTML=total3;
+			};
+
+			var star16=document.getElementById("i16");
+		star16.onclick=function(){
+			star16.style.color="gold";
+			total4++;
+			document.getElementById("totalcount4").innerHTML=total4;
+			};
+
+			var star17=document.getElementById("i17");
+		star17.onclick=function(){
+			star17.style.color="gold";
+			total4++;
+			document.getElementById("totalcount4").innerHTML=total4;
+			};
+
+			var star18=document.getElementById("i18");
+		star18.onclick=function(){
+			star18.style.color="gold";
+			total4++;
+			document.getElementById("totalcount4").innerHTML=total4;
+			};
+
+			var star19=document.getElementById("i19");
+		star19.onclick=function(){
+			star19.style.color="gold";
+			total4++;
+			document.getElementById("totalcount4").innerHTML=total4;
+			};
+
+			var star20=document.getElementById("i20");
+		star20.onclick=function(){
+			star20.style.color="gold";
+			total4++;
+			document.getElementById("totalcount4").innerHTML=total4;
+			};
+
+			var star21=document.getElementById("i21");
+		star21.onclick=function(){
+			star21.style.color="gold";
+			total5++;
+			document.getElementById("totalcount5").innerHTML=total5;
+			};
+
+			var star22=document.getElementById("i22");
+		star22.onclick=function(){
+			star22.style.color="gold";
+			total5++;
+			document.getElementById("totalcount5").innerHTML=total5;
+			};
+
+			var star23=document.getElementById("i23");
+		star23.onclick=function(){
+			star23.style.color="gold";
+			total5++;
+			document.getElementById("totalcount5").innerHTML=total5;
+			};
+
+			var star24=document.getElementById("i24");
+		star24.onclick=function(){
+			star24.style.color="gold";
+			total5++;
+			document.getElementById("totalcount5").innerHTML=total5;
+			};
+
+			var star25=document.getElementById("i25");
+		star25.onclick=function(){
+			star25.style.color="gold";
+			total5++;
+			document.getElementById("totalcount5").innerHTML=total5;
+			};
+
+
+			function search(){
+				var searchBoxData=document.getElementById("searchbox").value;
+				if(searchBoxData==="Computer" || searchBoxData==="computer" ||searchBoxData==="ကွန်ပျူတာ"|| searchBoxData==="ကွန်ပျူတာစာအုပ်များ" || searchBoxData==="ကွန်ပျူတာစာအုပ်")
+			{
+				window.open("Computer.html","newWindow");
+			}
+			else if(searchBoxData==="horror" || searchBoxData==="သရဲစာအုပ်" || searchBoxData==="သရဲစာအုပ်များ" || searchBoxData==="သရဲ")
+			{
+				window.open("horror.html","newWindow");
+			}
+			else if(searchBoxData==="health" || searchBoxData==="healthy" || searchBoxData==="ကျန်းမာရေးစာအုပ်များ" || searchBoxData==="ကျန်းမာရေးစာအုပ်" || searchBoxData==="ကျန်းမာရေး")
+			{
+				window.open("Health.html","newWindow");
+			}
+			else if(searchBoxData=="Historical" || searchBoxData=="historical" || searchBoxData=="history" || searchBoxData=="History" || searchBoxData=="သမိုင်းစာပေများ" || searchBoxData=="သမိုင်းစာပေ" || searchBoxData=="သမိုင်းစာအုပ်များ" || searchBoxData=="သမိုင်းစာအုပ်")
+			{
+				window.open("Historical.html","newWindow");
+			}
+			else if(searchBoxData=="Fiction" || searchBoxData=="fiction" || searchBoxData=="သုတစာပေ" || searchBoxData=="သုတ" || searchBoxData=="ရသစာပေ" || searchBoxData=="ရသ")
+			{
+				window.open("Fiction.html","newWindow");
+			}
+			else if(searchBoxData=="Translate" || searchBoxData=="translate" || searchBoxData=="ဘာသာပြန်စာအုပ်များ" || searchBoxData=="ဘာသာပြန်စာပေ" || searchBoxData=="ဘာသာပြန်" || searchBoxData=="ဘာသာပြန်စာအုပ်")
+			{
+				window.open("Translate.html","newWindow");
+			}
+			else if(searchBoxData=="Stories" || searchBoxData=="stories" || searchBoxData=="story" || searchBoxData=="Story" || searchBoxData=="ပုံပြင်စာအုပ်များ" || searchBoxData=="ပုံပြင်စာအုပ်" || searchBoxData=="ပုံပြင်")
+			{
+				window.open("Story.html","newWindow");
+			}
+			else if(searchBoxData=="LoveStories" || searchBoxData=="lovestories" || searchBoxData=="Lovestories" || searchBoxData=="lovestories" || searchBoxData=="lovestory" || searchBoxData=="LoveStory" || searchBoxData=="loveStory" || searchBoxData=="အချစ်ပုံပြင်စာအုပ်များ" || searchBoxData=="အချစ်ပုံပြင်စာအုပ်" || searchBoxData=="အချစ်ပုံပြင်")
+			{
+				window.open("LoveStory.html","newWindow");
+			}
+			else if(searchBoxData=="Funny" || searchBoxData=="funny" || searchBoxData=="Joke" || searchBoxData=="joke" || searchBoxData=="Commedy" || searchBoxData=="commedy" || searchBoxData=="ဟာသစာအုပ်များ" || searchBoxData=="ဟာသစာပေများ" || searchBoxData=="ဟာသစာအုပ်" || searchBoxData=="ဟာသစာပေ" || searchBoxData=="ဟာသ")
+			{
+				window.open("Funny.html","newWindow");
+			}
+			
+			else{alert("This Book is not in OUR LIBRARY.We will try to add this book.");}
+		
+			}
+		
+	</script>
+</body>
+</html>
